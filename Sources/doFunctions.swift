@@ -18,7 +18,7 @@ public struct Do {
     ) rethrows {
         
         do {
-            let result = try codes()
+            _ = try codes()
             print("ERROR: No matching error found")
         } catch let caughtError as E {
             print("OK: Error caught – \(caughtError)")
