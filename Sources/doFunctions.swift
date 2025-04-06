@@ -9,25 +9,24 @@ public struct Do {
         case error
     }
     
-    static public func experiment(_ codes: () throws -> Void) rethrows {
+    static public func experiment<T>(_ codes: () throws -> T) rethrows -> T {
         try codes()
     }
-    static public func throwsError<E: Swift.Error>(
+    static public func throwsError<T, E: Swift.Error>(
         _ e: E.Type,
-        _ codes: () throws -> Void
+        _ codes: () throws -> T
     ) rethrows {
         
         do {
-            try codes()
+            let result = try codes()
+            print("ERROR: No matching error found")
         } catch let caughtError as E {
             print("OK: Error caught – \(caughtError)")
         } catch {
             throw error
         }
-        
-        print("ERROR: No matching error found")
     }
-    static public func ignoreError(_ codes: () throws -> Void) rethrows { }
+    static public func ignoreError<T>(_ codes: () throws -> T) rethrows { }
 }
 
 public enum DoError: Error {
