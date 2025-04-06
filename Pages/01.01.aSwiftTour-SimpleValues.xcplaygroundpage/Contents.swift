@@ -20,22 +20,25 @@ let myConstant = 42
 let implicitInteger = 70
 let implicitDouble = 70.0
 let explicitDouble: Double = 70
-/*:
- - Experiment:
-    Create a constant with an explicit type of Float and a value of 4.
+/*: - Experiment:
+ Create a constant with an explicit type of Float and a value of 4.
  */
-let explicitFloat: Float = 4
+Do.experiment {
+    let explicitFloat: Float = 4
+}
 
 //: ### Type Conversion
 let label = "The width is "
 let width = 94
 let widthLabel = label + String(width)
-/*:
- - Experiment:
+
+/*: - Experiment:
  Try removing the conversion to String from the last line. What error do you get?
 */
-// error: binary operator '+' cannot be applied to operands of type 'String' and 'Int'
-// let widthLabel = label + width
+Do.ignoreError {
+    // error: binary operator '+' cannot be applied to operands of type 'String' and 'Int'
+//     let widthLabel = label + width
+}
 
 //: ### String Interpolation using \\\(...\)
 let apples = 3
@@ -46,9 +49,11 @@ let fruitSummary = "I have \(apples + oranges) pieces of fruit."
  - Experiment
     Use \() to include a floating-point calculation in a string and to include someone’s name in a greeting.
 */
-let bsp_2x2 = "2 x 2 = \(2 * 2)"
-let bsp_someoneName = "John"
-let bsp_greeting = "Hello, \(bsp_someoneName)! How are you?"
+Do.experiment {
+    let bsp_2x2 = "2 x 2 = \(2 * 2)"
+    let bsp_someoneName = "John"
+    let bsp_greeting = "Hello, \(bsp_someoneName)! How are you?"
+}
 
 //: ### Multiline Strings
 let quotation = """
