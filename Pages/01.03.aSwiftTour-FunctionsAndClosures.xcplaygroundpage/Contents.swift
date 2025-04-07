@@ -63,7 +63,7 @@ func returnFifteen() -> Int {
 }
 returnFifteen()
 
-//: Functions as First-Class Types
+//: ### Functions as First-Class Types
 func makeIncrementer() -> ((Int) -> Int) {
     func addOne(number: Int) -> Int {
         return 1 + number
@@ -94,7 +94,7 @@ numbers.map({ (number: Int) -> Int in
     return result
 })
 
-/*: - Experiment
+/*: - Experiment:
     Rewrite the closure to return zero for all odd numbers.
  */
 Do.experiment {

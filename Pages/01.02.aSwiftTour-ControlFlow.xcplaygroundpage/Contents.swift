@@ -21,6 +21,7 @@ print(teamScore)
 // Prints "11"
 
 //: ### Conditional Value Using if
+//: - note: from Swift 5.9 (Xcode 15)
 let scoreDecoration = if teamScore > 10 {
     "🎉"
 } else {
@@ -50,9 +51,11 @@ Do.experiment {
     var greeting = "Hello!"
     if let name = optionalName {
         greeting = "Hello, \(name)"
+    } else {
+        greeting = "Hello! NoName."
     }
     print(greeting)
-    // Prints just "Hello!"
+    // Prints "Hello! NoName."
 }
 
 //: ### Default Value Operator `??`

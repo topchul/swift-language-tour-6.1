@@ -74,7 +74,7 @@ let test = Square(sideLength: 5.2, name: "my test square")
 test.area()
 test.simpleDescription()
 
-/*: - Experiment
+/*: - Experiment:
      Make another subclass of NamedShape called Circle that takes a radius and a name as arguments to its initializer. Implement an area() and a simpleDescription() method on the Circle class.
 */
 Do.experiment {

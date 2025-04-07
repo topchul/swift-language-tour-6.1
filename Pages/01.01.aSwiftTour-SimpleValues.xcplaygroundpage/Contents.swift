@@ -45,14 +45,13 @@ let apples = 3
 let oranges = 5
 let appleSummary = "I have \(apples) apples."
 let fruitSummary = "I have \(apples + oranges) pieces of fruit."
-/*:
- - Experiment
-    Use \() to include a floating-point calculation in a string and to include someone’s name in a greeting.
+/*: - Experiment:
+     Use \\() to include a floating-point calculation in a string and to include someone’s name in a greeting.
 */
 Do.experiment {
-    let bsp_2x2 = "2 x 2 = \(2 * 2)"
-    let bsp_someoneName = "John"
-    let bsp_greeting = "Hello, \(bsp_someoneName)! How are you?"
+    let calculation_2x2 = "2 x 2 = \(2.0 * 2.0)"
+    let someoneName = "John"
+    let greeting = "Hello, \(someoneName)! How are you?"
 }
 
 //: ### Multiline Strings

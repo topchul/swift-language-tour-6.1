@@ -14,7 +14,6 @@ enum Rank: Int {
     case two, three, four, five, six, seven, eight, nine, ten
     case jack, queen, king
 
-
     func simpleDescription() -> String {
         switch self {
         case .ace:

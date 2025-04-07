@@ -45,15 +45,35 @@ let bDescription = b.simpleDescription
 //: ### Adding Functionality with Extensions
 
 extension Int: ExampleProtocol {
-    var simpleDescription: String {
+    public var simpleDescription: String {
         return "The number \(self)"
     }
-    mutating func adjust() {
+    public mutating func adjust() {
         self += 42
     }
 }
 print(7.simpleDescription)
 // Prints "The number 7"
+/*: - Note:
+     If you run the code line by line in a Swift Playground,
+     you must mark both `protocol ExampleProtocol` and the methods in the `Int` extension as `public`.
+     - This is required due to access control constraints in Swift Playgrounds.
+     ```
+     public protocol ExampleProtocol {
+         var simpleDescription: String { get }
+         mutating func adjust()
+     }
+     
+     extension Int: ExampleProtocol {
+         public var simpleDescription: String {
+             return "The number \(self)"
+         }
+         public mutating func adjust() {
+             self += 42
+         }
+     }
+     ```
+ */
 
 /*: - Experiment:
      Write an extension for the Double type that adds an absoluteValue property.

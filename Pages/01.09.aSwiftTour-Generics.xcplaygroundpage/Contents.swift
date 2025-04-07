@@ -45,7 +45,7 @@ func anyCommonElements<T: Sequence, U: Sequence>(_ lhs: T, _ rhs: U) -> Bool
 anyCommonElements([1, 2, 3], [3])
 
 /*: - Experiment:
- Modify the anyCommonElements(_:_:) function to make a function that returns an array of the elements that any two sequences have in common.
+ Modify the `anyCommonElements(_:_:)` function to make a function that returns an array of the elements that any two sequences have in common.
  */
 func anyCommonElements2
 <T: Sequence, U: Sequence, Element> (
